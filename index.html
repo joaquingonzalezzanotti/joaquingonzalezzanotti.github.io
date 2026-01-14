@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JGZ | Software Engineer Hub</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+  </head>
+  <body class="min-h-screen bg-[#0b0f1a] text-slate-100">
+    <div class="relative overflow-hidden">
+      <div class="pointer-events-none absolute inset-0">
+        <div
+          class="absolute -top-32 right-0 h-72 w-72 rounded-full bg-blue-500/20 blur-3xl"
+        ></div>
+        <div
+          class="absolute bottom-0 left-0 h-72 w-72 rounded-full bg-violet-500/20 blur-3xl"
+        ></div>
+      </div>
+      <main class="relative mx-auto flex w-full max-w-6xl flex-col gap-16 px-6 py-16">
+        <section class="flex flex-col gap-8">
+          <div class="flex flex-col gap-6">
+            <p
+              class="w-fit rounded-full border border-white/10 bg-white/5 px-4 py-2 text-xs uppercase tracking-[0.3em] text-slate-300"
+            >
+              Professional Hub
+            </p>
+            <h1 class="text-4xl font-semibold tracking-tight sm:text-6xl">
+              JGZ
+            </h1>
+            <p class="max-w-2xl text-lg text-slate-300">
+              Software Engineer especializado en construir productos digitales
+              escalables, interfaces elegantes y experiencias sólidas de extremo
+              a extremo.
+            </p>
+          </div>
+          <div class="flex flex-wrap gap-4">
+            <a
+              href="#"
+              class="rounded-xl bg-blue-500/90 px-6 py-3 text-sm font-semibold text-white shadow-lg shadow-blue-500/30 transition hover:-translate-y-0.5 hover:bg-blue-400"
+            >
+              Descargar CV
+            </a>
+            <a
+              href="#apps"
+              class="rounded-xl border border-white/10 bg-white/5 px-6 py-3 text-sm font-semibold text-white/90 transition hover:-translate-y-0.5 hover:border-white/30"
+            >
+              Ver proyectos
+            </a>
+          </div>
+        </section>
+
+        <section class="flex flex-col gap-6">
+          <div class="flex flex-wrap items-center justify-between gap-4">
+            <h2 class="text-2xl font-semibold">Stack principal</h2>
+            <p class="text-sm text-slate-400">
+              Tecnologías con las que construyo soluciones confiables.
+            </p>
+          </div>
+          <div
+            class="flex flex-wrap items-center gap-4 rounded-2xl border border-white/10 bg-white/5 px-6 py-4"
+          >
+            <span
+              class="rounded-full bg-white/10 px-4 py-2 text-sm text-slate-200"
+              >Python</span
+            >
+            <span
+              class="rounded-full bg-white/10 px-4 py-2 text-sm text-slate-200"
+              >Linux</span
+            >
+            <span
+              class="rounded-full bg-white/10 px-4 py-2 text-sm text-slate-200"
+              >Docker</span
+            >
+            <span
+              class="rounded-full bg-white/10 px-4 py-2 text-sm text-slate-200"
+              >Node.js</span
+            >
+            <span
+              class="rounded-full bg-white/10 px-4 py-2 text-sm text-slate-200"
+              >React</span
+            >
+            <span
+              class="rounded-full bg-white/10 px-4 py-2 text-sm text-slate-200"
+              >PostgreSQL</span
+            >
+          </div>
+        </section>
+
+        <section id="apps" class="flex flex-col gap-6">
+          <div class="flex flex-wrap items-center justify-between gap-4">
+            <h2 class="text-2xl font-semibold">Servicios & Apps</h2>
+            <p class="text-sm text-slate-400">
+              Accesos directos a mis productos digitales más recientes.
+            </p>
+          </div>
+          <div
+            class="grid grid-cols-1 gap-6 md:grid-cols-2 xl:grid-cols-3"
+          >
+            <a
+              class="group relative flex flex-col gap-4 rounded-2xl border border-white/10 bg-white/5 p-6 shadow-lg shadow-black/30 backdrop-blur-xl transition hover:-translate-y-1 hover:border-blue-400/50 hover:shadow-blue-500/30"
+              href="https://example.com"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <div
+                class="flex h-11 w-11 items-center justify-center rounded-xl bg-blue-500/20 text-blue-300"
+              >
+                <i data-lucide="layout-grid"></i>
+              </div>
+              <div class="flex flex-col gap-1">
+                <h3 class="text-lg font-semibold text-white">Atlas Insights</h3>
+                <p class="text-sm text-slate-400">
+                  Dashboard con analítica en tiempo real para decisiones rápidas.
+                </p>
+              </div>
+              <span
+                class="text-xs font-semibold uppercase tracking-[0.3em] text-blue-300/70"
+                >Abrir</span
+              >
+            </a>
+
+            <a
+              class="group relative flex flex-col gap-4 rounded-2xl border border-white/10 bg-white/5 p-6 shadow-lg shadow-black/30 backdrop-blur-xl transition hover:-translate-y-1 hover:border-violet-400/50 hover:shadow-violet-500/30"
+              href="https://example.com"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <div
+                class="flex h-11 w-11 items-center justify-center rounded-xl bg-violet-500/20 text-violet-300"
+              >
+                <i data-lucide="rocket"></i>
+              </div>
+              <div class="flex flex-col gap-1">
+                <h3 class="text-lg font-semibold text-white">Launchpad API</h3>
+                <p class="text-sm text-slate-400">
+                  Plataforma backend para integraciones de alto rendimiento.
+                </p>
+              </div>
+              <span
+                class="text-xs font-semibold uppercase tracking-[0.3em] text-violet-300/70"
+                >Abrir</span
+              >
+            </a>
+
+            <a
+              class="group relative flex flex-col gap-4 rounded-2xl border border-white/10 bg-white/5 p-6 shadow-lg shadow-black/30 backdrop-blur-xl transition hover:-translate-y-1 hover:border-blue-300/60 hover:shadow-blue-500/30"
+              href="https://example.com"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <div
+                class="flex h-11 w-11 items-center justify-center rounded-xl bg-blue-400/20 text-blue-200"
+              >
+                <i data-lucide="shield-check"></i>
+              </div>
+              <div class="flex flex-col gap-1">
+                <h3 class="text-lg font-semibold text-white">Secure Vault</h3>
+                <p class="text-sm text-slate-400">
+                  Gestión segura de credenciales y automatizaciones.
+                </p>
+              </div>
+              <span
+                class="text-xs font-semibold uppercase tracking-[0.3em] text-blue-200/70"
+                >Abrir</span
+              >
+            </a>
+
+            <a
+              class="group relative flex flex-col gap-4 rounded-2xl border border-white/10 bg-white/5 p-6 shadow-lg shadow-black/30 backdrop-blur-xl transition hover:-translate-y-1 hover:border-violet-300/60 hover:shadow-violet-500/30"
+              href="https://example.com"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <div
+                class="flex h-11 w-11 items-center justify-center rounded-xl bg-violet-400/20 text-violet-200"
+              >
+                <i data-lucide="sparkles"></i>
+              </div>
+              <div class="flex flex-col gap-1">
+                <h3 class="text-lg font-semibold text-white">Studio Flow</h3>
+                <p class="text-sm text-slate-400">
+                  Suite creativa para contenidos con flujos asistidos por IA.
+                </p>
+              </div>
+              <span
+                class="text-xs font-semibold uppercase tracking-[0.3em] text-violet-200/70"
+                >Abrir</span
+              >
+            </a>
+
+            <a
+              class="group relative flex flex-col gap-4 rounded-2xl border border-white/10 bg-white/5 p-6 shadow-lg shadow-black/30 backdrop-blur-xl transition hover:-translate-y-1 hover:border-blue-300/60 hover:shadow-blue-500/30"
+              href="https://example.com"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <div
+                class="flex h-11 w-11 items-center justify-center rounded-xl bg-blue-400/20 text-blue-200"
+              >
+                <i data-lucide="codesandbox"></i>
+              </div>
+              <div class="flex flex-col gap-1">
+                <h3 class="text-lg font-semibold text-white">Sandbox Lab</h3>
+                <p class="text-sm text-slate-400">
+                  Entornos aislados para pruebas y despliegues rápidos.
+                </p>
+              </div>
+              <span
+                class="text-xs font-semibold uppercase tracking-[0.3em] text-blue-200/70"
+                >Abrir</span
+              >
+            </a>
+
+            <a
+              class="group relative flex flex-col gap-4 rounded-2xl border border-white/10 bg-white/5 p-6 shadow-lg shadow-black/30 backdrop-blur-xl transition hover:-translate-y-1 hover:border-violet-300/60 hover:shadow-violet-500/30"
+              href="https://example.com"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <div
+                class="flex h-11 w-11 items-center justify-center rounded-xl bg-violet-400/20 text-violet-200"
+              >
+                <i data-lucide="messages-square"></i>
+              </div>
+              <div class="flex flex-col gap-1">
+                <h3 class="text-lg font-semibold text-white">Pulse Support</h3>
+                <p class="text-sm text-slate-400">
+                  Centro de soporte y automatización de tickets.
+                </p>
+              </div>
+              <span
+                class="text-xs font-semibold uppercase tracking-[0.3em] text-violet-200/70"
+                >Abrir</span
+              >
+            </a>
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <footer class="border-t border-white/10 bg-black/20">
+      <div
+        class="mx-auto flex w-full max-w-6xl flex-col gap-4 px-6 py-10 text-sm text-slate-400 sm:flex-row sm:items-center sm:justify-between"
+      >
+        <p>Disponible para colaborar en proyectos ambiciosos.</p>
+        <div class="flex flex-wrap gap-4 text-sm font-semibold text-slate-200">
+          <a class="transition hover:text-blue-300" href="#">LinkedIn</a>
+          <a class="transition hover:text-blue-300" href="#">GitHub</a>
+          <a class="transition hover:text-blue-300" href="#">Contacto</a>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      lucide.createIcons();
+    </script>
+  </body>
+</html>
