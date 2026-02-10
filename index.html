@@ -3,10 +3,10 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>JGZ | Portfolio y CV</title>
+    <title>JGZ | Ingenieria en Sistemas</title>
     <meta
       name="description"
-      content="Portfolio profesional de Joaquin Gonzalez Zanotti, estudiante de Ingenieria en Sistemas (UTN-FRC). Proyectos, stack tecnico, formacion y contacto."
+      content="Portfolio personal de Joaquin Gonzalez Zanotti. Proyectos, stack tecnico y contacto."
     />
     <meta
       name="google-site-verification"
@@ -20,358 +20,293 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&display=swap"
       rel="stylesheet"
     />
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://unpkg.com/lucide@latest"></script>
     <style>
-      html {
-        background-color: #f8fafc !important;
-      }
-
       :root {
         color-scheme: light;
       }
 
+      html {
+        background: #f3f8ff;
+        scroll-behavior: smooth;
+      }
+
       body {
-        font-family: "Sora", sans-serif;
-        background-color: #f8fafc !important;
-        background: radial-gradient(circle at 0% 0%, #dbeafe 0, transparent 45%),
-          radial-gradient(circle at 100% 0%, #ccfbf1 0, transparent 40%),
-          #f8fafc !important;
-      }
-
-      @media (prefers-color-scheme: dark) {
-        html,
-        body {
-          background-color: #f8fafc !important;
-          color: #0f172a !important;
-        }
-      }
-
-      .glass {
-        background: rgba(255, 255, 255, 0.72);
-        backdrop-filter: blur(6px);
+        margin: 0;
+        min-height: 100vh;
+        font-family: "Outfit", sans-serif;
+        color: #0f172a;
+        line-height: 1.45;
+        background:
+          radial-gradient(circle at 85% 0%, rgba(96, 165, 250, 0.2) 0%, transparent 34%),
+          radial-gradient(circle at 0% 0%, rgba(125, 211, 252, 0.2) 0%, transparent 38%),
+          linear-gradient(180deg, #f7fbff 0%, #f2f8ff 50%, #ecf4ff 100%);
       }
 
       .fade-up {
         opacity: 0;
-        transform: translateY(18px);
-        animation: fadeUp 0.65s ease forwards;
+        transform: translateY(24px);
+        transition: opacity 720ms cubic-bezier(0.22, 1, 0.36, 1), transform 720ms cubic-bezier(0.22, 1, 0.36, 1);
+      }
+
+      .fade-up.visible {
+        opacity: 1;
+        transform: translateY(0);
       }
 
       .delay-1 {
-        animation-delay: 0.12s;
+        transition-delay: 100ms;
       }
 
       .delay-2 {
-        animation-delay: 0.22s;
+        transition-delay: 180ms;
       }
 
       .delay-3 {
-        animation-delay: 0.32s;
+        transition-delay: 260ms;
       }
 
-      @keyframes fadeUp {
-        to {
-          opacity: 1;
-          transform: translateY(0);
-        }
+      .app-card {
+        background: rgba(255, 255, 255, 0.74);
+        border: 1px solid rgba(148, 163, 184, 0.24);
+        box-shadow: 0 14px 32px -28px rgba(37, 99, 235, 0.4);
+        backdrop-filter: blur(8px);
+        transition: transform 260ms ease, border-color 260ms ease, box-shadow 260ms ease;
+      }
+
+      .app-card:hover {
+        transform: translateY(-3px);
+        border-color: rgba(59, 130, 246, 0.45);
+        box-shadow: 0 16px 34px -24px rgba(59, 130, 246, 0.4);
+      }
+
+      .cta-primary {
+        background: linear-gradient(120deg, #2f7ff7 0%, #4ea6ff 100%);
+        box-shadow: 0 10px 24px -12px rgba(37, 99, 235, 0.55);
+      }
+
+      .cta-primary:hover {
+        box-shadow: 0 12px 26px -10px rgba(59, 130, 246, 0.5);
       }
     </style>
   </head>
-  <body class="min-h-screen text-slate-900">
-    <div class="mx-auto max-w-6xl px-6 py-8 sm:py-12">
-      <header
-        class="fade-up glass sticky top-4 z-10 mb-12 rounded-2xl border border-slate-200/70 px-5 py-4 shadow-sm sm:px-6"
-      >
-        <nav class="flex flex-wrap items-center justify-between gap-4 text-sm">
-          <a href="#" class="font-semibold tracking-tight text-slate-800">JGZ</a>
-          <div class="flex flex-wrap items-center gap-4 text-slate-600">
-            <a href="#portfolio" class="transition hover:text-slate-900">Portfolio</a>
-            <a href="#stack" class="transition hover:text-slate-900">Stack</a>
-            <a href="#cv" class="transition hover:text-slate-900">CV</a>
-            <a href="#contacto" class="transition hover:text-slate-900">Contacto</a>
-          </div>
-        </nav>
-      </header>
-
-      <main class="space-y-10 sm:space-y-12">
-        <section
-          class="fade-up delay-1 rounded-3xl border border-slate-200 bg-white px-6 py-8 shadow-lg shadow-slate-200/70 sm:px-10 sm:py-10"
-        >
+  <body>
+    <main class="mx-auto flex w-full max-w-5xl flex-col gap-12 px-5 py-12 sm:gap-14 sm:px-6 sm:py-14">
+      <section class="fade-up flex flex-col gap-6">
+        <div class="flex flex-col gap-4">
           <p
-            class="mb-4 inline-flex rounded-full bg-slate-900 px-3 py-1 text-xs font-semibold uppercase tracking-[0.2em] text-white"
+            class="w-fit rounded-full border border-slate-300 bg-white/65 px-3.5 py-1.5 text-[11px] uppercase tracking-[0.28em] text-slate-600"
           >
-            Perfil profesional
+            Plataforma Personal
           </p>
-          <h1 class="text-3xl font-semibold leading-tight tracking-tight sm:text-5xl">
+          <h1 class="text-[2.35rem] font-semibold tracking-tight text-slate-900 sm:text-[3.35rem]">
             Joaquin Gonzalez Zanotti
           </h1>
-          <p class="mt-3 max-w-3xl text-slate-600 sm:text-lg">
-            Estudiante de 5to anio de Ingenieria en Sistemas de Informacion (UTN-FRC).
-            Me enfoco en construir productos web claros, mantenibles y orientados a mejorar procesos.
+          <p class="max-w-2xl text-lg text-slate-700">
+            Estudiante de Ingenieria en Sistemas de Informacion (UTN-FRC)
           </p>
-          <div class="mt-6 flex flex-wrap gap-3">
-            <a
-              href="./Joaquin%20Gonzalez%20Zanotti%20CV.pdf"
-              download
-              class="rounded-xl bg-slate-900 px-5 py-3 text-sm font-semibold text-white transition hover:bg-slate-700"
-            >
-              Descargar CV
-            </a>
-            <a
-              href="#portfolio"
-              class="rounded-xl border border-slate-300 bg-white px-5 py-3 text-sm font-semibold text-slate-700 transition hover:border-slate-400 hover:text-slate-900"
-            >
-              Ver portfolio
-            </a>
-            <a
-              href="#contacto"
-              class="rounded-xl border border-slate-300 bg-white px-5 py-3 text-sm font-semibold text-slate-700 transition hover:border-slate-400 hover:text-slate-900"
-            >
-              Contacto
-            </a>
-          </div>
-        </section>
-
-        <section
-          id="portfolio"
-          class="fade-up delay-2 rounded-3xl border border-slate-200 bg-white px-6 py-8 shadow-sm sm:px-10"
-        >
-          <div class="mb-7 flex flex-wrap items-end justify-between gap-4">
-            <div>
-              <h2 class="text-2xl font-semibold tracking-tight sm:text-3xl">
-                Portfolio destacado
-              </h2>
-              <p class="mt-2 max-w-2xl text-sm text-slate-600">
-                Proyectos publicados donde aplique desarrollo full stack, foco en UX y despliegue en produccion.
-              </p>
-            </div>
-            <a
-              href="https://github.com/joaquingonzalezzanotti"
-              target="_blank"
-              rel="noreferrer"
-              class="text-sm font-semibold text-slate-700 underline-offset-4 transition hover:text-slate-900 hover:underline"
-            >
-              Ver repositorios en GitHub
-            </a>
-          </div>
-
-          <div class="grid gap-5 md:grid-cols-2">
-            <article
-              class="rounded-2xl border border-slate-200 bg-slate-50 p-5 transition hover:-translate-y-0.5 hover:border-teal-300"
-            >
-              <div
-                class="mb-4 inline-flex h-10 w-10 items-center justify-center rounded-lg bg-teal-100 text-teal-700"
-              >
-                <i data-lucide="wallet"></i>
-              </div>
-              <h3 class="text-lg font-semibold">ExpenseLog</h3>
-              <p class="mt-2 text-sm text-slate-600">
-                Plataforma para registro y analisis de gastos personales con reportes simples y accionables.
-              </p>
-              <div class="mt-4 flex flex-wrap gap-2 text-xs font-medium text-slate-600">
-                <span class="rounded-full bg-white px-2 py-1">React</span>
-                <span class="rounded-full bg-white px-2 py-1">Node.js</span>
-                <span class="rounded-full bg-white px-2 py-1">SQL</span>
-              </div>
-              <a
-                href="https://expenselog.com.ar/"
-                target="_blank"
-                rel="noreferrer"
-                class="mt-4 inline-flex items-center gap-1 text-sm font-semibold text-teal-700 transition hover:text-teal-900"
-              >
-                Abrir proyecto
-                <i data-lucide="arrow-up-right" class="h-4 w-4"></i>
-              </a>
-            </article>
-
-            <article
-              class="rounded-2xl border border-slate-200 bg-slate-50 p-5 transition hover:-translate-y-0.5 hover:border-sky-300"
-            >
-              <div
-                class="mb-4 inline-flex h-10 w-10 items-center justify-center rounded-lg bg-sky-100 text-sky-700"
-              >
-                <i data-lucide="sparkles"></i>
-              </div>
-              <h3 class="text-lg font-semibold">Sorty</h3>
-              <p class="mt-2 text-sm text-slate-600">
-                Aplicacion para organizar amigo invisible con una experiencia rapida, directa y sin friccion.
-              </p>
-              <div class="mt-4 flex flex-wrap gap-2 text-xs font-medium text-slate-600">
-                <span class="rounded-full bg-white px-2 py-1">JavaScript</span>
-                <span class="rounded-full bg-white px-2 py-1">Frontend Web</span>
-                <span class="rounded-full bg-white px-2 py-1">Deploy</span>
-              </div>
-              <a
-                href="https://sorty-neon.vercel.app"
-                target="_blank"
-                rel="noreferrer"
-                class="mt-4 inline-flex items-center gap-1 text-sm font-semibold text-sky-700 transition hover:text-sky-900"
-              >
-                Abrir proyecto
-                <i data-lucide="arrow-up-right" class="h-4 w-4"></i>
-              </a>
-            </article>
-          </div>
-        </section>
-
-        <section
-          id="stack"
-          class="fade-up delay-2 rounded-3xl border border-slate-200 bg-white px-6 py-8 shadow-sm sm:px-10"
-        >
-          <div class="mb-6">
-            <h2 class="text-2xl font-semibold tracking-tight sm:text-3xl">Stack tecnico</h2>
-            <p class="mt-2 max-w-2xl text-sm text-slate-600">
-              Tecnologias y metodologias destacadas en tu CV, agrupadas para lectura rapida de reclutadores o clientes.
-            </p>
-          </div>
-          <div class="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-            <div class="rounded-2xl border border-slate-200 p-4">
-              <h3 class="text-sm font-semibold uppercase tracking-wide text-slate-500">Lenguajes</h3>
-              <p class="mt-2 text-sm text-slate-700">C#, JavaScript, Python, SQL, HTML, CSS</p>
-            </div>
-            <div class="rounded-2xl border border-slate-200 p-4">
-              <h3 class="text-sm font-semibold uppercase tracking-wide text-slate-500">Frameworks</h3>
-              <p class="mt-2 text-sm text-slate-700">React, Node.js, Express, Spring Boot, .NET, Bootstrap</p>
-            </div>
-            <div class="rounded-2xl border border-slate-200 p-4">
-              <h3 class="text-sm font-semibold uppercase tracking-wide text-slate-500">Backend y ORM</h3>
-              <p class="mt-2 text-sm text-slate-700">APIs REST, Entity Framework, JWT</p>
-            </div>
-            <div class="rounded-2xl border border-slate-200 p-4">
-              <h3 class="text-sm font-semibold uppercase tracking-wide text-slate-500">Bases de datos</h3>
-              <p class="mt-2 text-sm text-slate-700">MySQL, SQLite, PostgreSQL</p>
-            </div>
-            <div class="rounded-2xl border border-slate-200 p-4">
-              <h3 class="text-sm font-semibold uppercase tracking-wide text-slate-500">Herramientas</h3>
-              <p class="mt-2 text-sm text-slate-700">Git, GitHub, GitLab, Maven, VS Code, Miro</p>
-            </div>
-            <div class="rounded-2xl border border-slate-200 p-4">
-              <h3 class="text-sm font-semibold uppercase tracking-wide text-slate-500">Metodos</h3>
-              <p class="mt-2 text-sm text-slate-700">Scrum, Kanban, UML, BPMN, arquitectura multicapa/microservicios</p>
-            </div>
-          </div>
-        </section>
-
-        <section
-          id="cv"
-          class="fade-up delay-3 rounded-3xl border border-slate-200 bg-white px-6 py-8 shadow-sm sm:px-10"
-        >
-          <div class="mb-6">
-            <h2 class="text-2xl font-semibold tracking-tight sm:text-3xl">Resumen del CV</h2>
-            <p class="mt-2 max-w-2xl text-sm text-slate-600">
-              Tu diferencial principal esta en combinar formacion tecnica solida con ejecucion practica en productos reales.
-            </p>
-          </div>
-          <div class="grid gap-4 sm:grid-cols-2">
-            <article class="rounded-2xl border border-slate-200 p-5">
-              <h3 class="font-semibold text-slate-900">Formacion academica</h3>
-              <p class="mt-2 text-sm text-slate-600">
-                UTN-FRC, estudiante de 5to anio de Ingenieria en Sistemas de Informacion (2021 - Actualidad).
-              </p>
-            </article>
-            <article class="rounded-2xl border border-slate-200 p-5">
-              <h3 class="font-semibold text-slate-900">Idiomas</h3>
-              <p class="mt-2 text-sm text-slate-600">
-                Ingles C1+ (Dorset School of English, 2015 - 2020).
-              </p>
-            </article>
-          </div>
-          <p class="mt-5 text-sm text-slate-600">
-            Recomendacion aplicada en esta web: mostrar primero proyectos (portfolio) y despues habilidades, para comunicar valor desde resultados concretos.
-          </p>
-        </section>
-
-        <section
-          id="contacto"
-          class="fade-up delay-3 rounded-3xl border border-slate-200 bg-white px-6 py-8 shadow-sm sm:px-10"
-        >
-          <div class="mb-6">
-            <h2 class="text-2xl font-semibold tracking-tight sm:text-3xl">Contacto</h2>
-            <p class="mt-2 max-w-2xl text-sm text-slate-600">
-              Si te interesa colaborar, podes escribirme por este formulario o por LinkedIn.
-            </p>
-          </div>
-          <form
-            action="https://formspree.io/f/mkoogrok"
-            method="POST"
-            class="grid gap-4 rounded-2xl border border-slate-200 bg-slate-50 p-5"
-          >
-            <div class="grid gap-4 sm:grid-cols-2">
-              <label class="text-sm font-medium text-slate-700">
-                Nombre
-                <input
-                  type="text"
-                  name="name"
-                  required
-                  class="mt-2 w-full rounded-xl border border-slate-300 bg-white px-4 py-3 text-sm text-slate-900 placeholder:text-slate-400 focus:border-slate-500 focus:outline-none"
-                  placeholder="Tu nombre"
-                />
-              </label>
-              <label class="text-sm font-medium text-slate-700">
-                Email
-                <input
-                  type="email"
-                  name="email"
-                  required
-                  class="mt-2 w-full rounded-xl border border-slate-300 bg-white px-4 py-3 text-sm text-slate-900 placeholder:text-slate-400 focus:border-slate-500 focus:outline-none"
-                  placeholder="tu@email.com"
-                />
-              </label>
-            </div>
-            <label class="text-sm font-medium text-slate-700">
-              Mensaje
-              <textarea
-                name="message"
-                rows="5"
-                required
-                class="mt-2 w-full rounded-xl border border-slate-300 bg-white px-4 py-3 text-sm text-slate-900 placeholder:text-slate-400 focus:border-slate-500 focus:outline-none"
-                placeholder="Contame sobre tu proyecto"
-              ></textarea>
-            </label>
-            <div class="flex flex-wrap items-center justify-between gap-3">
-              <p class="text-xs text-slate-500">Este formulario usa Formspree para el envio.</p>
-              <button
-                type="submit"
-                class="rounded-xl bg-slate-900 px-5 py-3 text-sm font-semibold text-white transition hover:bg-slate-700"
-              >
-                Enviar mensaje
-              </button>
-            </div>
-          </form>
-        </section>
-      </main>
-
-      <footer class="py-10 text-sm text-slate-600">
-        <div
-          class="flex flex-col gap-3 border-t border-slate-200 pt-6 sm:flex-row sm:items-center sm:justify-between"
-        >
-          <p>Disponible para practicas, proyectos freelance y colaboraciones tecnicas.</p>
-          <div class="flex flex-wrap gap-4 font-semibold text-slate-700">
-            <a
-              class="transition hover:text-slate-900"
-              href="https://www.linkedin.com/in/joaquin-gonzalez-zanotti/"
-              target="_blank"
-              rel="noreferrer"
-              >LinkedIn</a
-            >
-            <a
-              class="transition hover:text-slate-900"
-              href="https://github.com/joaquingonzalezzanotti"
-              target="_blank"
-              rel="noreferrer"
-              >GitHub</a
-            >
-          </div>
         </div>
-      </footer>
-    </div>
+        <div class="flex flex-wrap gap-3">
+          <a
+            href="./Joaquin%20Gonzalez%20Zanotti%20CV.pdf"
+            download
+            class="cta-primary rounded-xl px-5 py-2.5 text-sm font-semibold text-white transition hover:-translate-y-0.5"
+          >
+            Descargar CV
+          </a>
+          <a
+            href="#apps"
+            class="rounded-xl border border-slate-300 bg-white/70 px-5 py-2.5 text-sm font-semibold text-slate-800 transition hover:-translate-y-0.5 hover:border-slate-400"
+          >
+            Ver proyectos
+          </a>
+          <a
+            href="#contacto"
+            class="rounded-xl border border-slate-300 bg-white/70 px-5 py-2.5 text-sm font-semibold text-slate-800 transition hover:-translate-y-0.5 hover:border-slate-400"
+          >
+            Contacto
+          </a>
+        </div>
+      </section>
+
+      <section id="apps" class="fade-up flex flex-col gap-5 delay-1">
+        <div class="flex flex-wrap items-center justify-between gap-4">
+          <h2 class="text-2xl font-semibold tracking-tight text-slate-900 sm:text-3xl">Servicios & Apps</h2>
+          <p class="text-base text-slate-600">
+            Accesos directos a mis productos digitales mas recientes.
+          </p>
+        </div>
+        <div class="grid grid-cols-1 gap-4 md:grid-cols-2">
+          <a
+            class="app-card group relative flex flex-col gap-4 rounded-2xl p-5"
+            href="https://sorty-neon.vercel.app"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <div
+              class="flex h-11 w-11 items-center justify-center rounded-xl bg-blue-100 text-blue-700"
+            >
+              <i data-lucide="sparkles"></i>
+            </div>
+            <div class="flex flex-col gap-1.5">
+              <h3 class="text-2xl font-semibold text-slate-900">Sorty</h3>
+              <p class="text-base text-slate-600">
+                Tu amigo invisible de confianza.
+              </p>
+            </div>
+            <span class="text-sm font-semibold uppercase tracking-[0.24em] text-blue-700/80"
+              >Abrir</span
+            >
+          </a>
+
+          <a
+            class="app-card group relative flex flex-col gap-4 rounded-2xl p-5"
+            href="https://expenselog.com.ar/"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <div
+              class="flex h-11 w-11 items-center justify-center rounded-xl bg-sky-100 text-sky-700"
+            >
+              <i data-lucide="wallet"></i>
+            </div>
+            <div class="flex flex-col gap-1.5">
+              <h3 class="text-2xl font-semibold text-slate-900">ExpenseLog</h3>
+              <p class="text-base text-slate-600">
+                Registro y analisis de gastos personales con reportes claros.
+              </p>
+            </div>
+            <span class="text-sm font-semibold uppercase tracking-[0.24em] text-sky-700/80"
+              >Abrir</span
+            >
+          </a>
+        </div>
+      </section>
+
+      <section class="fade-up flex flex-col gap-5 delay-2">
+        <div class="flex flex-wrap items-center justify-between gap-4">
+          <h2 class="text-2xl font-semibold tracking-tight text-slate-900 sm:text-3xl">Stack principal</h2>
+          <p class="text-base text-slate-600">
+            Tecnologias con las que construyo soluciones confiables.
+          </p>
+        </div>
+        <div class="app-card flex flex-wrap items-center gap-3 rounded-2xl px-5 py-4">
+          <span class="rounded-full bg-blue-100 px-3.5 py-1.5 text-sm font-medium text-blue-800">Python</span>
+          <span class="rounded-full bg-blue-100 px-3.5 py-1.5 text-sm font-medium text-blue-800">Linux</span>
+          <span class="rounded-full bg-blue-100 px-3.5 py-1.5 text-sm font-medium text-blue-800"
+            >JavaScript / HTML / CSS</span
+          >
+          <span class="rounded-full bg-blue-100 px-3.5 py-1.5 text-sm font-medium text-blue-800">React</span>
+          <span class="rounded-full bg-blue-100 px-3.5 py-1.5 text-sm font-medium text-blue-800">Node.js</span>
+          <span class="rounded-full bg-blue-100 px-3.5 py-1.5 text-sm font-medium text-blue-800"
+            >PostgreSQL / MySQL</span
+          >
+        </div>
+      </section>
+
+      <section id="contacto" class="fade-up flex flex-col gap-5 delay-3">
+        <div class="flex flex-wrap items-center justify-between gap-4">
+          <h2 class="text-2xl font-semibold tracking-tight text-slate-900 sm:text-3xl">Contacto</h2>
+          <p class="text-base text-slate-600">
+            Tenes un proyecto en mente? Escribime y te respondo rapido.
+          </p>
+        </div>
+        <form
+          action="https://formspree.io/f/mkoogrok"
+          method="POST"
+          class="app-card grid gap-4 rounded-2xl p-5"
+        >
+          <div class="grid gap-3 sm:grid-cols-2">
+            <label class="text-sm font-medium text-slate-700">
+              Nombre
+              <input
+                type="text"
+                name="name"
+                required
+                class="mt-2 w-full rounded-xl border border-slate-300 bg-white px-3.5 py-2.5 text-sm text-slate-900 placeholder:text-slate-400 focus:border-blue-400 focus:outline-none"
+                placeholder="Tu nombre"
+              />
+            </label>
+            <label class="text-sm font-medium text-slate-700">
+              Email
+              <input
+                type="email"
+                name="email"
+                required
+                class="mt-2 w-full rounded-xl border border-slate-300 bg-white px-3.5 py-2.5 text-sm text-slate-900 placeholder:text-slate-400 focus:border-blue-400 focus:outline-none"
+                placeholder="tu@email.com"
+              />
+            </label>
+          </div>
+          <label class="text-sm font-medium text-slate-700">
+            Mensaje
+            <textarea
+              name="message"
+              rows="5"
+              required
+              class="mt-2 w-full rounded-xl border border-slate-300 bg-white px-3.5 py-2.5 text-sm text-slate-900 placeholder:text-slate-400 focus:border-blue-400 focus:outline-none"
+              placeholder="Contame sobre tu idea o necesidad"
+            ></textarea>
+          </label>
+          <div class="flex items-center justify-between gap-4">
+            <p class="text-sm text-slate-500">
+              Este formulario usa Formspree para el envio.
+            </p>
+            <button
+              type="submit"
+              class="cta-primary rounded-xl px-5 py-2.5 text-sm font-semibold text-white transition hover:-translate-y-0.5"
+            >
+              Enviar mensaje
+            </button>
+          </div>
+        </form>
+      </section>
+    </main>
+
+    <footer class="border-t border-slate-300/70 bg-white/45">
+      <div
+        class="mx-auto flex w-full max-w-5xl flex-col gap-3 px-5 py-8 text-sm text-slate-600 sm:flex-row sm:items-center sm:justify-between sm:px-6"
+      >
+        <p>Disponible para colaborar en proyectos ambiciosos.</p>
+        <div class="flex flex-wrap gap-4 text-sm font-semibold text-slate-700">
+          <a
+            class="transition hover:text-blue-700"
+            href="https://www.linkedin.com/in/joaquin-gonzalez-zanotti/"
+            target="_blank"
+            rel="noreferrer"
+            >LinkedIn</a
+          >
+          <a
+            class="transition hover:text-blue-700"
+            href="https://github.com/joaquingonzalezzanotti"
+            target="_blank"
+            rel="noreferrer"
+            >GitHub</a
+          >
+        </div>
+      </div>
+    </footer>
 
     <script>
       lucide.createIcons();
+
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add("visible");
+              observer.unobserve(entry.target);
+            }
+          });
+        },
+        { threshold: 0.15 }
+      );
+
+      document.querySelectorAll(".fade-up").forEach((el) => observer.observe(el));
     </script>
   </body>
 </html>
