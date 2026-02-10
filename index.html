@@ -26,15 +26,28 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://unpkg.com/lucide@latest"></script>
     <style>
+      html {
+        background-color: #f8fafc !important;
+      }
+
       :root {
         color-scheme: light;
       }
 
       body {
         font-family: "Sora", sans-serif;
+        background-color: #f8fafc !important;
         background: radial-gradient(circle at 0% 0%, #dbeafe 0, transparent 45%),
           radial-gradient(circle at 100% 0%, #ccfbf1 0, transparent 40%),
-          #f8fafc;
+          #f8fafc !important;
+      }
+
+      @media (prefers-color-scheme: dark) {
+        html,
+        body {
+          background-color: #f8fafc !important;
+          color: #0f172a !important;
+        }
       }
 
       .glass {
